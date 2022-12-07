@@ -26,5 +26,4 @@ interface TagInterface
      * @return boolean
      */
     public function isBlock(): bool;
-
 }
