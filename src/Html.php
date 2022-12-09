@@ -8,13 +8,7 @@ class Html
     {
         $className = "BernardinoSlv\\Solid\\Tag\\{$name}";
 
-        if (count($arguments) === 1) {
-            $tag = new $className($arguments[0]);
-            $attributes = $arguments[0];
-        } else {
-            $tag = new $className($arguments[0], $arguments[1]);
-            $attributes = $arguments[1];
-        }
+        $tag = (new ResolverHtmlTag)->resolver($className, $arguments);
 
         return $tag->render();
     }
