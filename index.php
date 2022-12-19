@@ -6,9 +6,10 @@ require_once __DIR__ . "/vendor/autoload.php";
 
 $html = new Html;
 
-$link = $html->a("Link", [
-    "href" => "https://www.bernardinoslv.com",
-    "class" => "btn btn-sm btn-info"
+$img = $html->img([
+    "src" => "https://www.bernardinoslv.com/image.png",
+    "title" => "Imagem do meu site",
+    "width" => "100px"
 ]);
 
-echo $link;
+echo $img;
